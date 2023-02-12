@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<checkstyle version="8.37">
+<checkstyle version="8.45.1">
+<file name="/home/dasargath/projects/java-project-61/app/src/main/java/hexlet/code/games/Even.java">
+</file>
+<file name="/home/dasargath/projects/java-project-61/app/src/main/java/hexlet/code/games/Progression.java">
+</file>
+<file name="/home/dasargath/projects/java-project-61/app/src/main/java/hexlet/code/games/Calc.java">
+</file>
+<file name="/home/dasargath/projects/java-project-61/app/src/main/java/hexlet/code/games/GCD.java">
+</file>
+<file name="/home/dasargath/projects/java-project-61/app/src/main/java/hexlet/code/games/Prime.java">
+</file>
 <file name="/home/dasargath/projects/java-project-61/app/src/main/java/hexlet/code/App.java">
 </file>
-<file name="/home/dasargath/projects/java-project-61/app/src/main/java/hexlet/code/Cli.java">
+<file name="/home/dasargath/projects/java-project-61/app/src/main/java/hexlet/code/Engine.java">
+</file>
+<file name="/home/dasargath/projects/java-project-61/app/src/main/java/hexlet/code/Greet.java">
 </file>
 </checkstyle>
