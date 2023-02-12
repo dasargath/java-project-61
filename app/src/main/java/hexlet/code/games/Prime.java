@@ -17,11 +17,8 @@ public class Prime {
         }
         Engine.gameEngine(dataSourceAndUserInput, task);
     }
-
     public static boolean isPrime(int figure) {
-
         boolean prime = true;
-
         if (figure <= 1) {
             prime = false;
         } else {

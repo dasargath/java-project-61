@@ -10,24 +10,20 @@ public class Engine {
     public static final int INPUT = 1;
 
     //randomizer methods for usage in different cases in different classes
-
     public static int getRandomNumber() {
         Random random = new Random();
         return random.nextInt(1, 100);
     }
-
     public static int getRandomNumber(int lastBound) {
         Random random = new Random();
         return random.nextInt(1,  lastBound - 1);
     }
-
     public static int getRandomNumber(int startBound, int lastBound) {
         Random random = new Random();
         return random.nextInt((lastBound - startBound) + 1) + startBound;
     }
 
     // common method used to set initial data array
-
     public static String[][] prepareDataSourceAndUserInput(String task) {
         String[][] dataSourceAndUserInput = new String[ROUNDS_LIMIT][ROUNDS_LIMIT];
         return dataSourceAndUserInput;
@@ -36,12 +32,10 @@ public class Engine {
     // program body for analysing input user data and outputting it to console
     public static void gameEngine(String[][] dataSourceAndUserInput, String task) {
 
-        if (Greet.inputName == null) {
-            System.out.println("Welcome to the Brain Games!");
-            System.out.println("May I have your name?");
-            Greet.inputName = new Scanner(System.in).nextLine();
-        }
-        System.out.println("Hello, " + Greet.inputName + "!");
+        System.out.println("Welcome to the Brain Games!");
+        System.out.println("May I have your name?");
+        String inputName = new Scanner(System.in).nextLine();
+        System.out.println("Hello, " + inputName + "!");
         System.out.println(task);
 
         int userTries = 0;
@@ -52,24 +46,21 @@ public class Engine {
             String usrChoice = listenUsrChoice.nextLine().toLowerCase();
             System.out.println("Your answer: " + usrChoice);
 
-
             if (usrChoice.equals(dataSourceAndUserInput[userTries][Engine.INPUT])) {
                 counterCorrect += 1;
                 System.out.println("Correct!");
             } else {
                 System.out.println("'" + usrChoice + "'"  + " is wrong answer ;(. Correct answer was " + "'"
                         + dataSourceAndUserInput[userTries][INPUT] + "'.");
-                System.out.println("Let's try again, " + Greet.inputName + "!" + "\n");
+                System.out.println("Let's try again, " + inputName + "!" + "\n");
                 break;
             }
             userTries += 1;
         }
-
         if (counterCorrect == 3) {
-            System.out.println("Congratulations, " + Greet.inputName + "!" + "\n");
+            System.out.println("Congratulations, " + inputName + "!" + "\n");
         }
     }
-
 }
 
 
