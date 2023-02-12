@@ -8,15 +8,17 @@ public class Engine {
     public static final int ROUNDS_LIMIT = 3;
     public static final int TASK_NUMBER = 0;
     public static final int INPUT = 1;
+    public static final int MAX_RAND_BOUND = 100;
+    public static final int MIN_RAND_BOUND = 1;
 
     //randomizer methods for usage in different cases in different classes
     public static int getRandomNumber() {
         Random random = new Random();
-        return random.nextInt(1, 100);
+        return random.nextInt(MIN_RAND_BOUND, MAX_RAND_BOUND);
     }
     public static int getRandomNumber(int lastBound) {
         Random random = new Random();
-        return random.nextInt(1,  lastBound - 1);
+        return random.nextInt(MIN_RAND_BOUND,  lastBound - 1);
     }
     public static int getRandomNumber(int startBound, int lastBound) {
         Random random = new Random();
@@ -57,7 +59,7 @@ public class Engine {
             }
             userTries += 1;
         }
-        if (counterCorrect == 3) {
+        if (counterCorrect == ROUNDS_LIMIT) {
             System.out.println("Congratulations, " + inputName + "!" + "\n");
         }
     }
