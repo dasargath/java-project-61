@@ -5,16 +5,16 @@
 A demonstration videos of each game:
 
 2. Even(user should guess if number is even or not):
-https://asciinema.org/a/0zClTUY7aGhReJcjTXEM9wWhs
+[![asciicast](https://asciinema.org/a/0zClTUY7aGhReJcjTXEM9wWhs.svg)](https://asciinema.org/a/0zClTUY7aGhReJcjTXEM9wWhs)
 
 3. Calc(user have to calculate 3 different operations with +, - or *):
-https://asciinema.org/a/7k4ejZQfobEFVhCQYeFQCeFls
+[![asciicast](https://asciinema.org/a/7k4ejZQfobEFVhCQYeFQCeFls.svg)](https://asciinema.org/a/7k4ejZQfobEFVhCQYeFQCeFls)
 
 4. GCD i,e greatest common divisor(user should find the greatest common divisor of two random numvers):
-https://asciinema.org/a/lGjsWGAOKgOXaTwWwXaIIgpmw
+[![asciicast](https://asciinema.org/a/lGjsWGAOKgOXaTwWwXaIIgpmw.svg)](https://asciinema.org/a/lGjsWGAOKgOXaTwWwXaIIgpmw)
 
 5. Progression(user should find a missing number in a randomly given arithmetic progression):
-https://asciinema.org/a/ykahG6hXKFJDAT9EeYUmI2pa4
+[![asciicast](https://asciinema.org/a/PfQEKy3FLc1CHvjz0CJIpluAD.svg)](https://asciinema.org/a/PfQEKy3FLc1CHvjz0CJIpluAD)
 
 6. Prime(user should guess if the randomly given number is prime):
-https://asciinema.org/a/PfQEKy3FLc1CHvjz0CJIpluAD
+[![asciicast](https://asciinema.org/a/ykahG6hXKFJDAT9EeYUmI2pa4.svg)](https://asciinema.org/a/ykahG6hXKFJDAT9EeYUmI2pa4)
