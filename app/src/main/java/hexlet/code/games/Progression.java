@@ -1,7 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-
+import hexlet.code.Misc;
 public class Progression {
 
     public static final int MIN_LEN = 5;
@@ -22,13 +22,13 @@ public class Progression {
     public static void launchGame() {
 
         String task = "What number is missing in the progression?";
-        String[][] dataSourceAndUserInput = Engine.prepareDataSourceAndUserInput(task);
+        String[][] dataSourceAndUserInput = new String[Engine.ROUNDS_LIMIT][Engine.ROUNDS_LIMIT];
 
         int correctAnswersCount = 0;
         while (correctAnswersCount < Engine.ROUNDS_LIMIT) {
-            int progressionLength = Engine.getRandomNumber(MIN_LEN, MAX_LEN);
-            int progressionStart = Engine.getRandomNumber(MIN_START, MAX_START);
-            int progressionDifference = Engine.getRandomNumber(MIN_DIFF, MAX_DIFF);
+            int progressionLength = Misc.getRandomNumber(MIN_LEN, MAX_LEN);
+            int progressionStart = Misc.getRandomNumber(MIN_START, MAX_START);
+            int progressionDifference = Misc.getRandomNumber(MIN_DIFF, MAX_DIFF);
             int hiddenIndex = (int) (Math.random() * (progressionLength - 1));
             int[] getProgression = generateProgression(progressionLength, progressionDifference, progressionStart);
 
