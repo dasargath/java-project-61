@@ -1,25 +1,30 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-import hexlet.code.Misc;
+import hexlet.code.RandomUtils;
 public class Even {
 
-    private static String isEven(int number) {
-        return (number % 2 == 0) ? "yes" : "no";
-
+    private static boolean isEven(int number) {
+        return (number % 2 == 0);
     }
+
+    private static String[] generateRoundData(int number) {
+        String[] roundData = new String[2];
+        roundData[Engine.TASK_NUMBER] = Integer.toString(number);
+        roundData[Engine.INPUT] = isEven(number) ? "yes" : "no";
+        return roundData;
+    }
+
     public static void launchGame() {
 
-        String task = "Answer 'yes' if the number is even, otherwise answer 'no'.";
-        String[][] dataSourceAndUserInput = new String[Engine.ROUNDS_LIMIT][Engine.ROUNDS_LIMIT];
+        String gameTask = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+        String[][] gameData = new String[Engine.ROUNDS_LIMIT][Engine.ROUNDS_LIMIT];
 
-        int userTries = 0;
-        while (userTries < Engine.ROUNDS_LIMIT) {
-            int randomFig = Misc.getRandomNumber();
-            dataSourceAndUserInput[userTries][Engine.TASK_NUMBER] = Integer.toString(randomFig);
-            dataSourceAndUserInput[userTries][Engine.INPUT] = isEven(randomFig);
-            userTries += 1;
+        for (int usrTries = 0; usrTries < Engine.ROUNDS_LIMIT; usrTries++) {
+            int randomFig = RandomUtils.getRandomNumber();
+            gameData[usrTries] = generateRoundData(randomFig);
         }
-        Engine.gameEngine(dataSourceAndUserInput, task);
+        Engine.gameEngine(gameData, gameTask);
     }
 }
+
